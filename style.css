@@ -127,6 +127,31 @@ nav ul li a {
 hr {
     margin-bottom: 1rem;
 }
+.card-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 4rem;
+}
+.card {
+    display: flex;
+    gap: 1rem;
+}
+.card-number {
+    color: rgb(226, 94, 46);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.card-title {
+    color: rgb(4, 4, 35);
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.card-desc {
+    font-size: .7rem;
+    color: #727070;
+}
 /* ====BREAKPOINTS===== */
 @media screen and (max-width: 48rem) {
     .navlist {
@@ -187,12 +212,18 @@ hr {
         padding: 0 .5rem;
        
     }
+    .card-section {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 2rem;
+    }
 }
 @media screen and (max-width: 600px) {
     .home {
         display: flex;
         flex-direction: column;
         width: 500px;
+        padding: 1rem 4rem;
     }
     .home-image {
         width: 100%;
@@ -208,6 +239,17 @@ hr {
         flex-direction: column;
         text-align: left;
     }
+    .card-number {
+        margin-bottom: .5rem;
+    }
+    .card-title {
+        color: rgb(4, 4, 35);
+        font-weight: 900;
+        margin-bottom: .5rem;
+    }
+    .card-desc {
+        font-size: .6rem;
+    }
 
 }
 /* For small devices */
@@ -220,6 +262,10 @@ hr {
     }
     .home-action a {
         font-size: .7rem;
+    }
+    .card-section {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width: 320px) {
