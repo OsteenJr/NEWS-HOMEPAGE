@@ -1,0 +1,226 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav {
+    display: flex;
+    align-items: center;
+    margin: 32px auto;
+    justify-content: space-between;
+    padding: 0 64px;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+    margin-right: 32px;
+}
+nav ul li a {
+    color: #404040;
+    text-decoration: none;
+}
+.sidebar {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    position: fixed;
+    padding: 32px 32px;
+    height: 100vh;
+    backdrop-filter: blur(.625rem);
+    box-shadow: 0 .25rem .625rem rgba(0, 0, 0, 0.3);
+}
+.sidebar img {
+    margin-bottom: 48px;
+    cursor: pointer;
+}
+.sidebar li {
+    margin-bottom: 16px;
+}
+.sidebar li a {
+    color: #fff;
+}
+.menubtn {
+    cursor: pointer;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.home {
+    padding: 1rem 6rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 1rem;
+}
+.home-image {
+    width: 100%;
+    height: 200px; /* Set a specific height */
+    background-image: url('images/image-web-3-desktop.jpg');
+    background-size: cover; /* Makes image cover the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.home-section {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    background-color: rgb(4, 4, 35);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+.home-section-title {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: rgb(232, 183, 21);
+}
+.home-article h3 {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+.home-article p {
+    font-size: .9rem;
+    color: #a9a6a6;
+    margin-bottom: 1rem;
+}
+.home-header {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.home-header h1 {
+    color: rgb(4, 4, 35);
+    font-weight: 900;
+    font-size: 4rem;
+}
+.home-action {
+    padding: 1rem;
+}
+.home-action p{
+    color: rgb(47, 20, 47);
+    margin-bottom: 2rem;
+}
+.home-action a {
+    color: rgb(47, 20, 47);
+    background-color: rgb(247, 58, 58);
+    text-decoration: none;
+    padding: 1rem 2rem;
+}
+hr {
+    margin-bottom: 1rem;
+}
+/* ====BREAKPOINTS===== */
+@media screen and (max-width: 48rem) {
+    .navlist {
+        display: none;
+    }
+    .menubtn {
+        display: block;
+    }
+
+    
+}
+@media screen and (min-width: 48.0625rem) {
+    .navlist {
+        display: flex;
+    }
+    .menubtn {
+        display: none;
+    }
+
+}
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+
+@media screen and (max-width: 1220px) {
+    .home {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .home-header h1 {
+        font-size: 3rem;
+    }
+    
+}
+/* For medium devices */
+@media screen and (max-width: 800px) {
+    .home {
+        grid-template-columns: 1fr 1fr;
+    }
+    .home-image {
+        grid-column: 1 / 4;
+    }
+    .home-section {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: row;
+        grid-row: 3 / -1;
+        align-items: center;
+        padding: 2rem;
+    }
+    .home-article h3 {
+        font-size: 1.1rem;
+    }
+    .home-article p {
+        font-size: .7rem;
+    }
+    .home-article {
+        padding: 0 .5rem;
+       
+    }
+}
+@media screen and (max-width: 600px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+    .home-image {
+        width: 100%;
+        height: 250px; /* Set a specific height */
+        background-image: url('images/image-web-3-mobile.jpg');
+        background-size: cover; /* Makes image cover the container */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    .home-section {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+}
+/* For small devices */
+@media screen and (max-width: 450px) {
+    .home-action p {
+        font-size: .7rem;
+    }
+    .home-header h1 {
+        font-size: 2rem;
+    }
+    .home-action a {
+        font-size: .7rem;
+    }
+}
+@media screen and (max-width: 320px) {
+}
